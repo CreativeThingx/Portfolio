@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+<title>Aryan Rawat | Graphic Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#5B2A86',secondary:'#E66A45',olive:'#2F3A25',burgundy:'#8B3A3A',lightGray:'#F5F5F5',darkGray:'#333333'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Montserrat', sans-serif;
+scroll-behavior: smooth;
+}
+.gradient-bg {
+background: linear-gradient(135deg, #5B2A86 0%, #E66A45 100%);
+}
+.creative-text {
+font-weight: 800;
+line-height: 0.9;
+opacity: 0.03 !important;
+pointer-events: none;
+user-select: none;
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -4px;
+left: 0;
+background-color: #8B3A3A;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.project-card:hover .project-overlay {
+opacity: 1;
+}
+.project-card:hover img {
+transform: scale(1.05);
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #5B2A86;
+box-shadow: 0 0 0 3px rgba(91, 42, 134, 0.2);
+}
+.button-hover {
+transition: all 0.3s ease;
+background-size: 200% auto;
+background-image: linear-gradient(to right, #2F3A25 0%, #5B2A86 50%, #E66A45 100%);
+background-position: right center;
+}
+.button-hover:hover {
+background-position: left center;
+}
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+animation: fadeIn 0.8s ease forwards;
+}
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.project-overlay {
+background: linear-gradient(135deg, rgba(91, 42, 134, 0.8) 0%, rgba(230, 106, 69, 0.8) 100%);
+opacity: 0;
+transition: all 0.3s ease;
+}
+
+/* Responsive Adjustments for Small Screens */
+@media (max-width: 767px) {
+.creative-text {
+font-size: 12vw;
+}
+.hero-content {
+flex-direction: column-reverse;
+text-align: center;
+}
+.hero-content img {
+max-width: 80%;
+margin-bottom: 2rem;
+}
+.hero-content h1 {
+font-size: 2.5rem;
+}
+.hero-content p {
+font-size: 1rem;
+}
+.nav-link::after {
+display: none;
+}
+.project-card {
+margin-bottom: 2rem;
+}
+.project-card img {
+height: 200px;
+}
+.about-section {
+flex-direction: column;
+}
+.about-image {
+max-width: 100%;
+margin-bottom: 2rem;
+}
+.contact-section {
+flex-direction: column;
+}
+.contact-form {
+padding: 1.5rem;
+}
+.footer-content {
+flex-direction: column;
+text-align: center;
+}
+.footer-links {
+flex-direction: column;
+gap: 1rem;
+}
+}
+
+@media (max-width: 639px) {
+.container {
+padding-left: 1rem;
+padding-right: 1rem;
+}
+h2 {
+font-size: 2rem;
+}
+h3 {
+font-size: 1.5rem;
+}
+.button {
+padding: 0.75rem 1.5rem;
+font-size: 0.875rem;
+}
+.nav-logo {
+font-size: 1.25rem;
+}
+.mobile-menu a {
+font-size: 1.25rem;
+}
+}
+</style>
+</head>
+<body class="bg-lightGray text-darkGray">
+<!-- Navigation -->
+<nav class="gradient-bg sticky top-0 z-50">
+<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+<a href="#" class="text-white font-['Pacifico'] text-2xl nav-logo">Aryan Rawat</a>
+<div class="hidden md:flex space-x-8">
+<a href="#home" class="text-white hover:text-white/90 font-medium nav-link">Home</a>
+<a href="#about" class="text-white hover:text-white/90 font-medium nav-link">About</a>
+<a href="#projects" class="text-white hover:text-white/90 font-medium nav-link">Projects</a>
+<a href="#contact" class="text-white hover:text-white/90 font-medium nav-link">Contact</a>
+</div>
+<div class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-white ri-2x"></i>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section id="home" class="relative overflow-hidden" style="background-image: linear-gradient(135deg, rgba(91, 42, 134, 0.95) 0%, rgba(230, 106, 69, 0.95) 100%), linear-gradient(135deg, #2F3A25 0%, #2F3A25 100%); min-height: 100vh;">
+<div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+<div class="creative-text text-white text-[15vw] absolute -top-0">CREATIVE</div>
+<div class="creative-text text-white text-[15vw] absolute top-[32%]">CREATIVE</div>
+<div class="creative-text text-white text-[15vw] absolute top-[64%]">CREATIVE</div>
+</div>
+<div class="container mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between relative z-10 min-h-[calc(100vh-76px)] hero-content">
+<div class="w-full md:w-1/2 text-white mb-12 md:mb-0 animate-fadeIn">
+<h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">Turning Ideas Into <span class="text-lightGray">Creative</span> Reality</h1>
+<p class="text-lg md:text-xl mb-8 opacity-90 max-w-lg">I'm Aryan Rawat, a graphic designer passionate about creating visually stunning designs that communicate and inspire.</p>
+<div class="flex space-x-4">
+<a href="#projects" class="bg-olive text-white px-8 py-3 rounded-button font-semibold hover:bg-olive/90 transition-all button">View My Work</a>
+<a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-button font-semibold hover:bg-white/10 transition-all button">Contact Me</a>
+</div>
+</div>
+<div class="w-full md:w-1/2 flex justify-center md:justify-center animate-fadeIn delay-200">
+<img src="avtaar.png" alt="My Avtaar" class="w-60 md:w-80 lg:w-[300px] h-auto  md:-ml-5.5 md:-mt-6">
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold mb-4 text-darkGray">About Me</h2>
+<div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-12 about-section">
+<div class="w-full md:w-2/5">
+<img src="my pic.png" alt="Aryan at work" class="rounded-lg shadow-xl lg:w-[350px] w-65 h-auto about-image">
+</div>
+<div class="w-full md:w-3/5">
+<h3 class="text-2xl md:text-3xl font-bold mb-6 text-primary">Creative Designer & Visual Storyteller</h3>
+<p class="text-lg mb-6 text-darkGray/90">With over 7 years of experience in graphic design,  <span class="bg-[#e060de] px-1.5 py-0.5 rounded-md text-darkGray font-medium">
+    I specialize in creating <b>Brand identities, Infographics, Thumbnails, Carousels, Product posts</b>  that captivate and communicate effectively.
+  </span></p>
+<p class="text-lg mb-8 text-darkGray/90">My design philosophy centers on the perfect balance between aesthetics and functionality. Every project I undertake is approached with meticulous attention to detail and a commitment to exceeding client expectations.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-medal-line text-primary ri-lg"></i>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Brand Identity</h4>
+<p class="text-darkGray/80">Creating distinctive visual identities that resonate with target audiences.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary/10 rounded-full mr-4">
+<i class="ri-pie-chart-2-fill text-secondary ri-lg"></i>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Infographics</h4>
+<p class="text-darkGray/80">Crafting intuitive and engaging digital experiences.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-olive/10 rounded-full mr-4">
+<i class="ri-pen-nib-line text-olive ri-lg"></i>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Thumbnails</h4>
+<p class="text-darkGray/80">Developing custom thumbnails that tell compelling stories.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-burgundy/10 rounded-full mr-4">
+<i class="ri-shopping-bag-4-line text-burgundy ri-lg"></i>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Product posts</h4>
+<p class="text-darkGray/80">Designing visually striking product creatives that attract, engage, and convert.</p>
+</div>
+</div>
+</div>
+<a href="#contact" class="inline-block bg-olive text-white px-8 py-3 rounded-button font-semibold hover:bg-olive/90 transition-all button">Get In Touch</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="py-20 bg-lightGray">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold mb-4 text-darkGray">Featured Projects</h2>
+<div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+<p class="text-lg mt-6 max-w-2xl mx-auto text-darkGray/80">A selection of my recent work showcasing brand identity, digital design, and creative solutions.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="project-card bg-white rounded-lg overflow-hidden shadow-lg group">
+<div class="relative overflow-hidden h-64">
+<img src="Thumbnail-designs.png" class="w-full h-full object-cover transition-transform duration-500">
+<div class="project-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+<h3 class="text-xl font-bold mb-2">Thumbnail Desings</h3>
+<p class="text-center mb-4">Designing bold thumbnails that drive clicks and spark curiosity.</p>
+<span class="px-4 py-1 bg-white/20 rounded-full text-sm">Thumbnail Desings</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 text-darkGray">Thumbnail Desings</h3>
+<p class="text-darkGray/80 mb-4">Designing custom thumbnails that grab attention, spark curiosity, and drive clicks—perfectly tailored for YouTube, social media, and digital content.</p>
+<a href="#" class="text-burgundy font-medium hover:underline">View Project</a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="project-card bg-white rounded-lg overflow-hidden shadow-lg group">
+<div class="relative overflow-hidden h-64">
+<img src="ad-creatives.png" alt="FitTrack Mobile App" class="w-full h-full object-cover transition-transform duration-500">
+<div class="project-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+<h3 class="text-xl font-bold mb-2">Ad Creatives</h3>
+<p class="text-center mb-4">Designing impactful ads that connect, engage, and drive action.</p>
+<span class="px-4 py-1 bg-white/20 rounded-full text-sm">Ad Creatives</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 text-darkGray">Ad Creatives</h3>
+<p class="text-darkGray/80 mb-4">Designing high-converting ad creatives that capture attention, communicate your message clearly, and drive engagement across digital platforms.</p>
+<a href="#" class="text-burgundy font-medium hover:underline">View Project</a>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="project-card bg-white rounded-lg overflow-hidden shadow-lg group">
+<div class="relative overflow-hidden h-64">
+<img src="Product-designs.png" alt="Product posts" class="w-full h-full object-cover transition-transform duration-500">
+<div class="project-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+<h3 class="text-xl font-bold mb-2">Product posts</h3>
+<p class="text-center mb-4">Designing engaging visuals that showcase products and boost audience interaction.
+
+</p>
+<span class="px-4 py-1 bg-white/20 rounded-full text-sm">Product posts</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 text-darkGray">Product posts</h3>
+<p class="text-darkGray/80 mb-4">Creating eye-catching product visuals that highlight features, build trust, and drive engagement.</p>
+<a href="#" class="text-burgundy font-medium hover:underline">View Project</a>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="project-card bg-white rounded-lg overflow-hidden shadow-lg group">
+<div class="relative overflow-hidden h-64">
+<img src="https://readdy.ai/api/search-image?query=animated%20logo%20reveal%20and%20motion%20graphics%20for%20tech%20startup%2C%20showing%20dynamic%20transitions%20and%20modern%20design%20elements%2C%20professional%20motion%20design%2C%20high%20quality%20animation%20frames&width=600&height=400&seq=12350&orientation=landscape" alt="TechWave Motion Graphics" class="w-full h-full object-cover transition-transform duration-500">
+<div class="project-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+<h3 class="text-xl font-bold mb-2">TechWave Motion Graphics</h3>
+<p class="text-center mb-4">Animated logo and brand elements for tech startup</p>
+<span class="px-4 py-1 bg-white/20 rounded-full text-sm">Motion Graphics</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 text-darkGray">TechWave Motion Graphics</h3>
+<p class="text-darkGray/80 mb-4">Designed and animated a dynamic logo reveal and motion graphics package for a technology startup's digital presence.</p>
+<a href="#" class="text-burgundy font-medium hover:underline">View Project</a>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="project-card bg-white rounded-lg overflow-hidden shadow-lg group">
+<div class="relative overflow-hidden h-64">
+<img src="https://readdy.ai/api/search-image?query=magazine%20layout%20design%20with%20editorial%20photography%20and%20typography%2C%20fashion%20magazine%20spread%20with%20clean%20grid%20layout%2C%20professional%20editorial%20design%2C%20high%20quality%20print%20design&width=600&height=400&seq=12351&orientation=landscape" alt="Vogue Editorial Design" class="w-full h-full object-cover transition-transform duration-500">
+<div class="project-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+<h3 class="text-xl font-bold mb-2">Vogue Editorial Design</h3>
+<p class="text-center mb-4">Magazine layout and typography for fashion publication</p>
+<span class="px-4 py-1 bg-white/20 rounded-full text-sm">Editorial Design</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 text-darkGray">Vogue Editorial Design</h3>
+<p class="text-darkGray/80 mb-4">Created sophisticated editorial layouts and typography treatments for a high-end fashion magazine, balancing imagery and text.</p>
+<a href="#" class="text-burgundy font-medium hover:underline">View Project</a>
+</div>
+</div>
+<!-- Project 6 -->
+<div class="project-card bg-white rounded-lg overflow-hidden shadow-lg group">
+<div class="relative overflow-hidden h-64">
+<img src="https://readdy.ai/api/search-image?query=event%20branding%20and%20promotional%20materials%20for%20music%20festival%2C%20showing%20posters%2C%20tickets%2C%20wristbands%20and%20signage%20with%20cohesive%20design%2C%20professional%20event%20branding%2C%20high%20quality%20print%20design&width=600&height=400&seq=12352&orientation=landscape" alt="Harmony Music Festival" class="w-full h-full object-cover transition-transform duration-500">
+<div class="project-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+<h3 class="text-xl font-bold mb-2">Harmony Music Festival</h3>
+<p class="text-center mb-4">Complete event branding and promotional materials</p>
+<span class="px-4 py-1 bg-white/20 rounded-full text-sm">Event Branding</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 text-darkGray">Harmony Music Festival</h3>
+<p class="text-darkGray/80 mb-4">Developed comprehensive branding and promotional materials for a three-day music festival, including posters, tickets, and digital assets.</p>
+<a href="#" class="text-burgundy font-medium hover:underline">View Project</a>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="#" class="inline-block gradient-bg text-white px-8 py-3 rounded-button font-semibold hover:opacity-90 transition-all button">View All Projects</a>
+</div>
+</div>
+</section>
+
+<br><br><br>
+
+<!-- ----------------------------------------------------------------------------------------------------------------------------- -->
+
+<div class="container mx-auto px-6">
+  <!-- Section Header -->
+  <div class="text-center mb-16">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-darkGray">Get In Touch</h2>
+    <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+    <p class="text-lg mt-6 max-w-2xl mx-auto text-darkGray/80">
+      Have a project in mind or want to discuss potential collaborations? I'd love to hear from you!
+    </p>
+  </div>
+
+  <!-- Grid Layout -->
+  <div class="flex flex-col lg:flex-row gap-12">
+    
+    <!-- Left: Contact Form -->
+
+    <div class="w-full lg:w-1/2 bg-lightGray rounded-lg p-8 shadow-md"  id="contact">
+      <h3 class="text-2xl font-bold mb-6 text-primary">Send Me a Message</h3>
+      <form action="https://formspree.io/f/mgvybnwl" method="POST" id="contactForm">
+        <div class="mb-6">
+          <label for="name" class="block text-darkGray font-medium mb-2">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required class="w-full px-4 py-3 bg-white border border-gray-200 rounded focus:border-primary">
+        </div>
+        <div class="mb-6">
+          <label for="email" class="block text-darkGray font-medium mb-2">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your email address" required class="w-full px-4 py-3 bg-white border border-gray-200 rounded focus:border-primary">
+        </div>
+        <div class="mb-6">
+          <label for="subject" class="block text-darkGray font-medium mb-2">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What is this regarding?" required class="w-full px-4 py-3 bg-white border border-gray-200 rounded focus:border-primary">
+        </div>
+        <div class="mb-6">
+          <label for="message" class="block text-darkGray font-medium mb-2">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required class="w-full px-4 py-3 bg-white border border-gray-200 rounded focus:border-primary"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-olive text-white px-8 py-3 rounded font-semibold hover:bg-olive/90 transition-all">
+          Send Message
+        </button>
+      </form>
+    </div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- Right: Contact Info + Image -->
+    <div class="w-full lg:w-1/2">
+      <!-- Info -->
+      <div class="mb-10">
+        <h3 class="text-2xl font-bold mb-6 text-secondary">Contact Information</h3>
+        <div class="space-y-6">
+          <!-- Email -->
+          <div class="flex items-start">
+            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+              <i class="ri-mail-line text-primary ri-lg"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-1">Email</h4>
+              <p class="text-darkGray/80">creativethingxx@gmail.com</p>
+            </div>
+          </div>
+          <!-- Phone -->
+          <div class="flex items-start">
+            <div class="w-10 h-10 flex items-center justify-center bg-secondary/10 rounded-full mr-4">
+              <i class="ri-phone-line text-secondary ri-lg"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-1">Phone</h4>
+              <p class="text-darkGray/80">+91 98765 43210</p>
+            </div>
+          </div>
+          <!-- Location -->
+          <div class="flex items-start">
+            <div class="w-10 h-10 flex items-center justify-center bg-olive/10 rounded-full mr-4">
+              <i class="ri-map-pin-line text-olive ri-lg"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-1">Location</h4>
+              <p class="text-darkGray/80">Mumbai, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <div class="mb-10">
+        <h3 class="text-xl font-bold mb-4 text-burgundy">Follow Me</h3>
+        <div class="flex space-x-4">
+          <a href="https://www.instagram.com/creativethingx_/" class="w-10 h-10 flex items-center justify-center bg-darkGray rounded-full text-white hover:bg-primary transition">
+            <i class="ri-instagram-line"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-darkGray rounded-full text-white hover:bg-primary transition">
+            <i class="ri-behance-line"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-darkGray rounded-full text-white hover:bg-primary transition">
+            <i class="ri-dribbble-line"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-darkGray rounded-full text-white hover:bg-primary transition">
+            <i class="ri-linkedin-line"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div>
+        <img src="room-setup.jpg" alt="Workspace" class="w-full h-auto rounded-2xl shadow-2xl">
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br>
+<!-- Footer -->
+<footer class="gradient-bg text-white py-12">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center footer-content">
+<div class="mb-8 md:mb-0">
+<a href="#" class="font-['Pacifico'] text-3xl">Aryan Rawat</a>
+<p class="mt-2 text-white/80 max-w-md">Creating meaningful designs that communicate, inspire, and leave a lasting impression.</p>
+</div>
+<div class="flex flex-col items-center md:items-end">
+<p class="text-white/80 mb-ing md:items-end">
+<p class="text-white/80 mb-2">© 2025 Aryan Rawat. All Rights Reserved.</p>
+<div class="flex space-x-6 mt-4 footer-links">
+<a href="#" class="text-white/80 hover:text-white transition-colors">Privacy Policy</a>
+<a href="#" class="text-white/80 hover:text-white transition-colors">Terms of Service</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation Menu -->
+<div id="mobileMenu" class="fixed inset-0 bg-darkGray/95 z-50 flex items-center justify-center transform translate-x-full transition-transform duration-300">
+<button id="closeMenu" class="absolute top-6 right-6 text-white">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-close-line ri-2x"></i>
+</div>
+</button>
+<nav class="flex flex-col items-center space-y-8 mobile-menu">
+<a href="#home" class="text-white text-2xl font-medium hover:text-secondary transition-colors">Home</a>
+<a href="#about" class="text-white text-2xl font-medium hover:text-secondary transition-colors">About</a>
+<a href="#projects" class="text-white text-2xl font-medium hover:text-secondary transition-colors">Projects</a>
+<a href="#contact" class="text-white text-2xl font-medium hover:text-secondary transition-colors">Contact</a>
+</nav>
+</div>
+<script id="navigation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.querySelector('.ri-menu-line').parentElement.parentElement;
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMenuButton = document.getElementById('closeMenu');
+const mobileNavLinks = mobileMenu.querySelectorAll('a');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('translate-x-full');
+});
+closeMenuButton.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+mobileNavLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+});
+});
+</script>
+<script id="scroll-animation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const animateOnScroll = function() {
+const elements = document.querySelectorAll('.project-card');
+elements.forEach(element => {
+const elementPosition = element.getBoundingClientRect().top;
+const windowHeight = window.innerHeight;
+if (elementPosition < windowHeight * 0.85) {
+element.classList.add('animate-fadeIn');
+}
+});
+};
+window.addEventListener('scroll', animateOnScroll);
+animateOnScroll();
+});
+</script>
+<script id="smooth-scroll-script">
+document.addEventListener('DOMContentLoaded', function() {
+const navLinks = document.querySelectorAll('a[href^="#"]');
+navLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      submitButton.textContent = 'Sending...';
+      submitButton.disabled = true;
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          alert('✅ Message sent successfully! Thank you :)');
+          form.reset();
+        } else {
+          alert('❌ Failed to send message. Please try again.');
+        }
+      } catch (error) {
+        alert('⚠️ An error occurred. Please try again later.');
+      } finally {
+        submitButton.textContent = 'Send Message';
+        submitButton.disabled = false;
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
